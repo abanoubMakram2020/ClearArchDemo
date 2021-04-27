@@ -24,7 +24,7 @@ namespace CleanArch.Infra.Data.Repository
             universityDBContext.SaveChanges();
         }
 
-        public IEnumerable<Course> GetCourses()
+        public IQueryable<Course> GetCourses()
         {
             return universityDBContext.Courses;
         }

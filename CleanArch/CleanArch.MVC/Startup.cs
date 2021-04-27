@@ -1,5 +1,6 @@
 using CleanArch.Infra.Data.Context;
 using CleanArch.Infra.IoC;
+using CleanArch.MVC.Configurations;
 using CleanArch.MVC.Data;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
@@ -44,6 +45,7 @@ namespace CleanArch.MVC
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
             services.AddMediatR(typeof(Startup));
+            services.RegisterAutoMapper();
             RegisterServices(services);
         }
 
